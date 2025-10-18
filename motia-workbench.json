@@ -1,0 +1,28 @@
+[
+  {
+    "id": "basic-tutorial",
+    "config": {
+      "steps\\api.step.ts": {
+        "x": 0,
+        "y": 205
+      }
+    }
+  },
+  {
+    "id": "Motio_Workflow",
+    "config": {
+      "steps\\event.step.ts": {
+        "x": -17,
+        "y": 35
+      },
+      "steps\\api.step.ts": {
+        "x": -430,
+        "y": 21
+      },
+      "steps\\notification.step.ts": {
+        "x": 611,
+        "y": 82
+      }
+    }
+  }
+]
