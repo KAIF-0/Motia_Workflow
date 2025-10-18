@@ -12,8 +12,10 @@ declare module 'motia' {
   }
 
   interface Handlers {
+    'Process Registered User': EventHandler<{ id: number; name: string; email: string; password: string }, { topic: 'notification'; data: { name: string; email: string } }>
+    'User Cron': CronHandler<never>
+    'Add User': ApiRouteHandler<{ name: string; email: string; password: string }, ApiResponse<200, { id: number; name: string; email: string; password: string }>, { topic: 'user-created'; data: { id: number; name: string; email: string; password: string } }>
+    'Get All Users': ApiRouteHandler<Record<string, unknown>, ApiResponse<200, Array<{ name: string; email: string }>>, never>
     'ManageNotification': EventHandler<{ name: string; email: string }, never>
-    'ProcessRegisteredUser': EventHandler<{ id: number; name: string; email: string; password: string }, { topic: 'notification'; data: { name: string; email: string } }>
-    'ApiTrigger': ApiRouteHandler<{ name: string; email: string; password: string }, ApiResponse<200, { id: number; name: string; email: string; password: string }>, { topic: 'user-created'; data: { id: number; name: string; email: string; password: string } }>
   }
 }

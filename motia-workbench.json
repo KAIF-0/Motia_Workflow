@@ -11,17 +11,29 @@
   {
     "id": "Motio_Workflow",
     "config": {
-      "steps\\event.step.ts": {
-        "x": -17,
-        "y": 35
+      "steps/event.step.ts": {
+        "x": 235,
+        "y": 147
       },
-      "steps\\api.step.ts": {
-        "x": -430,
-        "y": 21
+      "steps/cron.step.ts": {
+        "x": -92,
+        "y": 14
       },
-      "steps\\notification.step.ts": {
-        "x": 611,
-        "y": 82
+      "steps/add-user.step.ts": {
+        "x": -351,
+        "y": 151
+      },
+      "steps/users-noop.step.ts": {
+        "x": 80,
+        "y": 393
+      },
+      "steps/get-user.step.ts": {
+        "x": -316,
+        "y": 438
+      },
+      "steps/notification.step.ts": {
+        "x": 938,
+        "y": 193
       }
     }
   }

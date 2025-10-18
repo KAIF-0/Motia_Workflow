@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 export const config: EventConfig = {
     type: 'event',
-    name: 'ProcessRegisteredUser',
+    name: 'Process Registered User',
     description: 'Motio workflow event step, demonstrates how to consume an event from a topic and persist data in state',
     flows: ['Motio_Workflow'],
     subscribes: ['user-created'],
@@ -16,7 +16,7 @@ export const config: EventConfig = {
     }),
 }
 
-export const handler: Handlers['ProcessRegisteredUser'] = async (input, { traceId, logger, state, emit }) => {
+export const handler: Handlers['Process Registered User'] = async (input, { traceId, logger, state, emit }) => {
     logger.info('Step 02 – Process User Register', { input, traceId })
 
 

@@ -14,12 +14,11 @@ const ResponseSchema = z.object({
 
 export const config: ApiRouteConfig = {
   type: 'api',
-  name: 'ApiTrigger',
-  description: 'Motio workflow api trigger',
+  name: 'Add User',
   flows: ['Motio_Workflow'],
 
   method: 'POST',
-  path: '/workflow',
+  path: '/add-user',
   bodySchema: z.object({
     name: z.string(),
     email: z.string(),
@@ -32,7 +31,8 @@ export const config: ApiRouteConfig = {
   emits: ['user-created'],
 }
 
-export const handler: Handlers['ApiTrigger'] = async (req, { logger, traceId, state, emit }) => {
+
+export const handler: Handlers['Add User'] = async (req, { logger, traceId, state, emit }) => {
   logger.info('Step 01 – Processing API Step', { ...req.body, traceId })
 
   const { name, email, password } = req.body

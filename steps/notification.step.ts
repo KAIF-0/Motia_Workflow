@@ -13,10 +13,10 @@ export const config: EventConfig = {
     }),
 }
 
-export const handler: Handlers['ProcessRegisteredUser'] = async (input, { traceId, logger, state, emit }) => {
+export const handler: Handlers['ManageNotification'] = async (input, { traceId, logger, state, emit }) => {
     logger.info('Step 03 – Manage Notifications', { input, traceId })
 
     //notifications
     logger.log(`Sending notification to user: ${input?.email}`)
-    
+
 }
